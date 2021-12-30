@@ -50,15 +50,23 @@ export const Header = styled.h1`
 
 export const NavbarArea = styled.div`
   height: 100%;
-  width: ${({ open }) => (open ? "auto" : "0")};
+  width: auto;
+  transform: ${({ open }) => (open ? "scale(1)" : "scale(0,1)")};
   background-color: rgba(25, 25, 25, 0.9);
   box-shadow: 0px 0px 1vh 0.1vh rgb(236, 219, 186);
-  transition: ease-in-out 2000ms;
+  transform-origin: left;
+  transition: transform 200ms ease-in-out;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   z-index: 10;
   position: fixed;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    transform-origin: top;
+    transform: ${({ open }) => (open ? "scale(1)" : "scale(1,0)")};
+  }
 `;
 
 export const NavbarItem = styled.div`
@@ -79,6 +87,8 @@ export const NavbarItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: ${({ open }) => (open ? "1" : "0")};
+  transition: opacity 100ms ease-in-out;
 
   :hover {
     text-shadow: 0px 0px 0.5vh rgb(236, 219, 186);

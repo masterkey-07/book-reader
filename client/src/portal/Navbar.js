@@ -20,6 +20,7 @@ const Navbar = ({ open = true, books: { books }, set }) => {
       {navbarItems.length > 0 ? (
         navbarItems.map((item, index) => (
           <NavbarItem
+            open={open}
             key={index}
             onClick={() => {
               navigate(item.url);
