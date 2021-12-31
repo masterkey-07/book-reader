@@ -59,7 +59,7 @@ const Chapter = ({
   useEffect(() => {
     chapter && setComment(chapter.comments);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [chapter_number]);
+  }, [chapter_number, chapter]);
 
   return (
     <ChapterReader>
