@@ -58,7 +58,7 @@ export const NavbarArea = styled.div`
   transition: transform 200ms ease-in-out;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: auto;
   z-index: 10;
   position: fixed;
 
