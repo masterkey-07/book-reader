@@ -13,8 +13,7 @@ const Book = ({ books: { books, chapters }, setTitle }) => {
         <Fragment>
           <span>{bookName}</span>
           <br />
-          <br />
-          Resumo:{" "}
+          <br />{" "}
           {books.find((book) => book.book_name.includes(bookName)).book_summary}
           <br />
           <br />
