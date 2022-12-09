@@ -3,7 +3,7 @@ import { ERROR, GET_BOOKS, POST_COOMENT } from "./types";
 const initialState = {
   books: [],
   chapters: [],
-  title: "Leitor de Livros da Aninha",
+  title: "Leitor de Livros (Intermináveis)",
 };
 
 // eslint-disable-next-line import/no-anonymous-default-export

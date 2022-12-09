@@ -17,7 +17,7 @@ import {
 
 const App = () => {
   const [navbar, setNavbar] = useState(false);
-  const [title, setTitle] = useState("Leitor de Livros da Ana");
+  const [title, setTitle] = useState("Leitor de Livros (Intermináveis)");
   const ref = useRef();
   useEffect(() => {
     store.dispatch(getBooks());
